@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Password Protection Screen -->
+    <div id="password-protection">
+        <div class="password-container">
+            <h2>💖 Anniversary Celebration 💖</h2>
+            <p>This website is a special gift for our anniversary. Please enter the password to access our celebration.</p>
+            
+            <input type="password" id="password-input" class="password-input" placeholder="Enter the password" autocomplete="off">
+            <button id="password-submit" class="password-submit">Enter</button>
+            
+            <div id="error-message" class="error-message">
+                Incorrect password. Please try again.
+            </div>
+            
+            <div id="attempts-warning" class="attempts-warning" style="display: none;">
+                <span id="attempts-count">3</span> attempts remaining
+            </div>
+            
+            <div class="hint">
+                Hint: It's our special date (DDMMYYYY format)
+            </div>
+        </div>
+    </div>
+    
+    <!-- Website Content (Hidden until password is correct) -->
+    <div id="website-content">
+        <header>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            
+            <div class="header-content">
+                <h1>Happy Anniversary! <span class="heartbeat">💑</span></h1>
+                <div class="anniversary-count">Celebrating <span id="years">3</span> Wonderful Years Together</div>
+                <div class="couple-names">Alex & Sam ❤️</div>
+            </div>
+        </header>
+
+        <section id="countdown">
+            <div class="container">
+                <h2>Time Since Our Journey Began</h2>
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="years-count">3</span>
+                        <span class="countdown-label">Years</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="months-count">36</span>
+                        <span class="countdown-label">Months</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="days-count">1095</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="hours-count">26280</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="love-story">
+            <div class="container">
+                <h2>Our Love Story Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">June 15, 2021</div>
+                        <h3>The First Meeting</h3>
+                        <p>We met at that cozy coffee shop downtown. You spilled your latte on my shirt, and I knew right then my life would never be the same.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">September 3, 2021</div>
+                        <h3>Our First Date</h3>
+                        <p>Dinner under the stars at that little Italian restaurant. You wore the blue dress that still takes my breath away.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">December 24, 2021</div>
+                        <h3>The Christmas Eve Confession</h3>
+                        <p>Under the mistletoe, you said "I love you" for the first time. The snow was falling softly, and my heart was racing.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">June 15, 2022</div>
+                        <h3>One Year Anniversary</h3>
+                        <p>We returned to that same coffee shop where we first met. You proposed a toast to forever, and I knew I'd found my person.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+                <h2>Our Journey Together 👫</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Anniversary memory">
+                        <div class="memory-caption">
+                            <h3>Our First Vacation</h3>
+                            <p>That beach trip where we watched the sunset every evening, holding hands and dreaming about our future.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Anniversary memory">
+                        <div class="memory-caption">
+                            <h3>The Birthday Surprise</h3>
+                            <p>When you planned that entire surprise party for my 30th. I've never felt more loved and cherished.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Anniversary memory">
+                        <div class="memory-caption">
+                            <h3>Our First Home</h3>
+                            <p>The day we got the keys to our first apartment. We slept on the floor with pizza and talked about all our dreams.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1052&q=80" alt="Anniversary memory">
+                        <div class="memory-caption">
+                            <h3>Christmas Morning</h3>
+                            <p>Waking up together on Christmas morning, with the tree lights twinkling and knowing we were each other's best gift.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos">
+            <div class="container">
+                <div class="message-box">
+                    <h3>To My Forever Person 💕</h3>
+                    <p>Three years ago, I didn't know my heart could feel this full. Every day with you is a blessing, every moment a treasure. Here's to forever and always. I love you more than words could ever express.</p>
+                    <p style="margin-top: 20px; font-style: italic;">Happy Anniversary, my love.</p>
+                </div>
+                
+                <h2>Our Special Moments</h2>
+                <div class="video-container">
+                    <div class="video-box">
+                        <div class="video-placeholder">
+                            <div class="video-icon">🎥</div>
+                            <p>Our Anniversary Montage</p>
+                            <p><em>(Video would appear here)</em></p>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <div class="video-placeholder">
+                            <div class="video-icon">💖</div>
+                            <p>Messages from Loved Ones</p>
+                            <p><em>(Video would appear here)</em></p>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <div class="video-placeholder">
+                            <div class="video-icon">🎵</div>
+                            <p>Our Song: "Perfect" by Ed Sheeran</p>
+                            <p><em>(Video would appear here)</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wishes">
+            <div class="container">
+                <h2>Anniversary Wishes</h2>
+                <div class="wishes-container">
+                    <div class="wish">
+                        <p class="wish-text">Happy Anniversary to the most beautiful couple I know! Your love story inspires everyone around you. May you continue to grow together and cherish each other for all the years to come.</p>
+                        <p class="wish-author">- Sarah & Mike (Friends)</p>
+                    </div>
+                    <div class="wish">
+                        <p class="wish-text">To my dear children, watching your love blossom has been our greatest joy. You complement each other perfectly. Here's to many more years of happiness, laughter, and love.</p>
+                        <p class="wish-author">- Mom & Dad</p>
+                    </div>
+                    <div class="wish">
+                        <p class="wish-text">Three years of love, laughter, and building a life together. You two are proof that true love exists. Can't wait to see what the next three decades bring!</p>
+                        <p class="wish-author">- Jessica (Best Friend)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>Created with ❤️ to celebrate our love 💑</p>
+                <p style="margin-top: 10px; font-size: 1.1rem;">Here's to many more years together!</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Password Protection System
+        const correctPassword = "15062021"; // Change this to your desired password (our anniversary date: 15/06/2021)
+        let attempts = 3;
+        
+        // DOM Elements
+        const passwordProtection = document.getElementById('password-protection');
+        const websiteContent = document.getElementById('website-content');
+        const passwordInput = document.getElementById('password-input');
+        const passwordSubmit = document.getElementById('password-submit');
+        const errorMessage = document.getElementById('error-message');
+        const attemptsWarning = document.getElementById('attempts-warning');
+        const attemptsCount = document.getElementById('attempts-count');
+        
+        // Focus on password input when page loads
+        passwordInput.focus();
+        
+        // Enter key to submit password
+        passwordInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        
+        // Submit button click
+        passwordSubmit.addEventListener('click', checkPassword);
+        
+        function checkPassword() {
+            const enteredPassword = passwordInput.value.trim();
+            
+            if (enteredPassword === correctPassword) {
+                // Correct password - grant access
+                errorMessage.style.display = 'none';
+                attemptsWarning.style.display = 'none';
+                
+                // Show success message
+                passwordSubmit.textContent = "Access Granted!";
+                passwordSubmit.style.background = "linear-gradient(135deg, #4CAF50, #8BC34A)";
+                
+                // Fade out password protection
+                passwordProtection.style.opacity = '0';
+                
+                // Show website content after a delay
+                setTimeout(() => {
+                    passwordProtection.style.display = 'none';
+                    websiteContent.style.display = 'block';
+                    
+                    // Initialize website content
+                    initializeWebsite();
+                }, 800);
+            } else {
+                // Incorrect password
+                attempts--;
+                errorMessage.style.display = 'block';
+                
+                // Shake animation for error
+                errorMessage.style.animation = 'none';
+                setTimeout(() => {
+                    errorMessage.style.animation = 'shake 0.5s';
+                }, 10);
+                
+                // Clear input
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                // Update attempts warning
+                if (attempts > 0) {
+                    attemptsWarning.style.display = 'block';
+                    attemptsCount.textContent = attempts;
+                } else {
+                    // No attempts left
+                    passwordInput.disabled = true;
+                    passwordSubmit.disabled = true;
+                    passwordSubmit.textContent = "Access Denied";
+                    passwordSubmit.style.background = "linear-gradient(135deg, #f44336, #e53935)";
+                    errorMessage.textContent = "No attempts remaining. Please refresh the page.";
+                    errorMessage.style.color = "#f44336";
+                }
+            }
+        }
+        
+        // Website initialization (only runs after correct password)
+        function initializeWebsite() {
+            // Create heart elements
+            function createHeartElements() {
+                const header = document.querySelector('header');
+                
+                // Create heart elements
+                for (let i = 0; i < 20; i++) {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.innerHTML = '❤️';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.top = Math.random() * 100 + 'vh';
+                    heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                    heart.style.animationDelay = (Math.random() * 3) + 's';
+                    
+                    header.appendChild(heart);
+                }
+            }
+            
+            // Create confetti effect
+            function createConfetti() {
+                const symbols = ['❤️', '💑', '💕', '💖', '💗', '💓', '💞'];
+                const colors = ['#ff6bcd', '#87ceeb', '#ff9ad5', '#a2d9ff', '#ffffff'];
+                const container = document.querySelector('header');
+                
+                for (let i = 0; i < 40; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                    confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.opacity = Math.random();
+                    confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    
+                    container.appendChild(confetti);
+                    
+                    // Remove confetti after animation completes
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 5000);
+                }
+            }
+            
+            // Calculate anniversary time
+            function calculateAnniversaryTime() {
+                // Set your anniversary date (year, month-1, day)
+                const anniversaryDate = new Date(2021, 5, 15); // June 15, 2021
+                const currentDate = new Date();
+                
+                // Calculate years
+                let years = currentDate.getFullYear() - anniversaryDate.getFullYear();
+                
+                // Adjust if anniversary hasn't occurred this year yet
+                if (currentDate.getMonth() < anniversaryDate.getMonth() || 
+                    (currentDate.getMonth() === anniversaryDate.getMonth() && currentDate.getDate() < anniversaryDate.getDate())) {
+                    years--;
+                }
+                
+                // Calculate total months
+                let months = years * 12;
+                months += currentDate.getMonth() - anniversaryDate.getMonth();
+                if (currentDate.getDate() < anniversaryDate.getDate()) {
+                    months--;
+                }
+                
+                // Calculate total days
+                const timeDiff = currentDate.getTime() - anniversaryDate.getTime();
+                const days = Math.floor(timeDiff / (1000 * 3600 * 24));
+                
+                // Calculate total hours
+                const hours = Math.floor(timeDiff / (1000 * 3600));
+                
+                // Update the display
+                document.getElementById('years').textContent = years;
+                document.getElementById('years-count').textContent = years;
+                document.getElementById('months-count').textContent = months;
+                document.getElementById('days-count').textContent = days;
+                document.getElementById('hours-count').textContent = hours.toLocaleString();
+            }
+            
+            // Initialize effects
+            createHeartElements();
+            
+            // Create confetti periodically
+            setInterval(createConfetti, 400);
+            createConfetti();
+            
+            // Calculate and display anniversary time
+            calculateAnniversaryTime();
+            
+            // Update the count every hour
+            setInterval(calculateAnniversaryTime, 3600000);
+            
+            // Add heartbeat effect to all heart emojis
+            document.querySelectorAll('.heartbeat').forEach(el => {
+                setInterval(() => {
+                    el.style.animation = 'none';
+                    setTimeout(() => {
+                        el.style.animation = 'heartbeat 1.5s infinite';
+                    }, 10);
+                }, 4500);
+            });
+        }
+    </script>
+</body>
+</html>
