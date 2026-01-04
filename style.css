@@ -120,6 +120,103 @@
             padding: 0 20px;
         }
         
+        /* Music Player Styles */
+        #music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50px;
+            padding: 12px 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid #ff6bcd;
+            animation: slideInUp 1s ease-out 0.5s both;
+            max-width: 400px;
+            width: auto;
+        }
+        
+        #music-toggle {
+            background: linear-gradient(135deg, #ff6bcd, #ff9ad5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 205, 0.3);
+        }
+        
+        #music-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 107, 205, 0.4);
+        }
+        
+        #music-toggle.playing {
+            background: linear-gradient(135deg, #87ceeb, #a2d9ff);
+            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+        }
+        
+        #music-toggle.playing:hover {
+            box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
+        }
+        
+        #music-info {
+            font-size: 0.9rem;
+            color: #5a4a6a;
+            font-style: italic;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 250px;
+        }
+        
+        /* Music Volume Control */
+        #volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 5px;
+        }
+        
+        #volume-slider {
+            width: 80px;
+            height: 5px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #e0e0e0;
+            border-radius: 3px;
+            outline: none;
+        }
+        
+        #volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ff6bcd;
+            cursor: pointer;
+        }
+        
+        #volume-slider::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ff6bcd;
+            cursor: pointer;
+            border: none;
+        }
+        
         /* Header */
         header {
             background: linear-gradient(135deg, #ff6bcd 0%, #87ceeb 50%, #ffffff 100%);
@@ -547,6 +644,23 @@
             20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
         
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
         /* Message Box */
         .message-box {
             background: linear-gradient(135deg, #ff6bcd, #87ceeb);
@@ -567,6 +681,21 @@
         .message-box p {
             font-size: 1.3rem;
             line-height: 1.6;
+        }
+        
+        /* Heartbeat Animation */
+        .heartbeat {
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.1); }
+            10% { transform: scale(1); }
+            15% { transform: scale(1.1); }
+            20% { transform: scale(1); }
+            100% { transform: scale(1); }
         }
         
         /* Responsive */
@@ -630,6 +759,25 @@
                 left: -56px !important;
                 right: auto !important;
             }
+            
+            /* Responsive Music Player */
+            #music-player {
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+                justify-content: center;
+                max-width: none;
+                padding: 10px 20px;
+            }
+            
+            #music-info {
+                font-size: 0.8rem;
+                max-width: 150px;
+            }
+            
+            #volume-control {
+                display: none;
+            }
         }
         
         .confetti {
@@ -642,20 +790,5 @@
             to {
                 transform: translateY(100vh);
             }
-        }
-        
-        /* Heartbeat Animation */
-        .heartbeat {
-            animation: heartbeat 1.5s infinite;
-            display: inline-block;
-        }
-        
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            5% { transform: scale(1.1); }
-            10% { transform: scale(1); }
-            15% { transform: scale(1.1); }
-            20% { transform: scale(1); }
-            100% { transform: scale(1); }
         }
     </style>
