@@ -852,8 +852,25 @@
         }
         
         .wish-emoji {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
             display: block;
+        }
+        
+        .wish-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            z-index: 2;
         }
     </style>
